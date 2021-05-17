@@ -46,8 +46,7 @@
                                 <a class="nav-link nav-link-label" href="#" data-toggle="dropdown">
                                     <i class="fa fa-bell"> </i>
                                     <span
-                                        class="badge badge-pill badge-default badge-danger badge-default badge-up badge-glow   notif-count"
-                                        data-count="9">9</span>
+                                        class="badge badge-pill badge-default badge-danger badge-default badge-up badge-glow notif-count" data-count="9">9</span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
                                     <li class="dropdown-menu-header">
@@ -59,10 +58,10 @@
                                         <a href="">
                                             <div class="media">
                                                 <div class="media-body">
-                                                    <h6 class="media-heading text-right ">عنوان الاشعار </h6>
-                                                    <p class="notification-text font-small-3 text-muted text-right"> نص الاشعار</p>
+                                                    <h6 class="media-heading text-center ">صاحب الإشعار</h6>
+                                                    <p class="notification-text font-small-3 text-muted text-center">محتوى الإشعار</p>
                                                     <small style="direction: ltr;">
-                                                        <p class=" text-muted text-right"
+                                                        <p class=" text-muted text-center"
                                                            style="direction: ltr;"> 20-05-2020 - 06:00 pm
                                                         </p>
                                                         <br>
@@ -74,7 +73,7 @@
 
                                     </li>
                                     <li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center"
-                                                                        href=""> جميع الاشعارات </a>
+                                                                        href="">صندوق الإشعارات</a>
                                     </li>
                                 </ul>
                             </li>
@@ -127,5 +126,6 @@
         });
 
     </script>
+    <script src="{{ asset('js/pusherNotifications.js') }}"></script>
 </body>
 </html>

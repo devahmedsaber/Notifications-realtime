@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\NewNotification;
 use App\Models\Comment;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -40,6 +41,14 @@ class HomeController extends Controller
             'user_id' => Auth::id(),
             'comment' => $request->comment
         ]);
+        // The Data That Event Takes It And Pass To Pusher Web Socket
+        $data = [
+            'post_id' => $request->post_id,
+            'user_id' => Auth::id(),
+            'user_name' => Auth::user()->name,
+            'comment' => $request->comment
+        ];
+        event(new NewNotification($data));
         return redirect()->back()->with(['success' => 'تم إضافة تعليقك بنجاح']);
     }
 }
